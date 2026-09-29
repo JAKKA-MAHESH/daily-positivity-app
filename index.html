@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="One gentle affirmation and one tiny positive action each day.">
+  <meta name="theme-color" content="#edf5f3">
+  <meta property="og:title" content="Daily Dose of Positivity">
+  <meta property="og:description" content="One gentle thought. One tiny action. A calmer moment, every day.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.example/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daily Dose of Positivity">
+  <meta name="twitter:description" content="One gentle affirmation and one tiny positive action each day.">
+  <title>Daily Dose of Positivity 🌱</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🌱%3C/text%3E%3C/svg%3E">
+  <!-- PWA-ready: add manifest.json and a service worker when offline installation is desired. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Daily Dose of Positivity home"><span class="brand-mark" aria-hidden="true">🌱</span> Daily Dose of Positivity</a>
+    <button id="themeToggle" class="icon-button ripple" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span id="themeIcon" aria-hidden="true">☾</span></button>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">A tiny pause for a better day</p>
+      <h1 id="page-title">Your daily dose of <span>positivity.</span></h1>
+      <p class="intro">One gentle thought. One tiny action. No pressure to transform your whole life before lunch.</p>
+      <div class="day-counter" aria-live="polite"><span class="counter-dot" aria-hidden="true"></span><span id="dayCounter">This is your Day 1 of positivity</span></div>
+    </section>
+
+    <section id="content" class="content-grid" aria-label="Today's positivity">
+      <article class="positivity-card affirmation-card">
+        <div class="card-heading"><span class="card-icon" aria-hidden="true">✦</span><div><p class="card-kicker">Today's affirmation</p><h2>A thought to carry</h2></div></div>
+        <p id="affirmationText" class="daily-text">I can meet today with patience and curiosity.</p>
+        <button class="copy-button ripple" type="button" data-copy="affirmation" aria-label="Copy today's affirmation"><span class="copy-icon" aria-hidden="true">⧉</span> Copy affirmation</button>
+      </article>
+
+      <article class="positivity-card action-card">
+        <div class="card-heading"><span class="card-icon" aria-hidden="true">✿</span><div><p class="card-kicker">Today's tiny action</p><h2>Something kind to do</h2></div></div>
+        <p id="actionText" class="daily-text">Take three slow breaths, making each exhale a little longer than the inhale.</p>
+        <button class="copy-button ripple" type="button" data-copy="action" aria-label="Copy today's positive action"><span class="copy-icon" aria-hidden="true">⧉</span> Copy action</button>
+      </article>
+    </section>
+
+    <section class="controls" aria-label="Daily controls">
+      <button id="newDayButton" class="primary-button ripple" type="button"><span aria-hidden="true">↻</span> New Day</button>
+      <a id="shareButton" class="secondary-button ripple" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share your daily positivity on X"><span aria-hidden="true">𝕏</span> Share on X</a>
+    </section>
+    <p class="privacy-note">Your day count and theme preference stay in your browser. No account or personal data is required.</p>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="site-footer">
+    <p>Built with <span aria-hidden="true">❤️</span> as open source</p>
+    <a href="https://github.com/JAKKA-MAHESH/daily-positivity-app" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+  </footer>
+
+  <noscript><div class="noscript-message">JavaScript is disabled, so the starter affirmation and action remain visible. Enable JavaScript for the daily counter, random pairs, sharing, copy buttons, and theme switcher.</div></noscript>
+  <script src="script.js" defer></script>
+</body>
+</html>
